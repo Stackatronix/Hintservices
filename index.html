@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo-white.png" type="image/icon type">
+    <title>Hint Services | Professional Cleaning Services</title>
+    <link href="assets/css/Style.css" rel="stylesheet">
+    <script src="assets/scripts/script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-md hero-navbar">
+        <div class="container d-flex align-items-center">
+            <a class="navbar-brand hero-brand d-inline-flex align-items-center" href="#home">
+                <img src="./assets/images/Hintservices-logo-white.png" class="hero-brand-icon" alt="Hint Services">
+            </a>
+            <button class="navbar-toggler hero-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse hero-collapse w-100 align-items-center" id="navbarCollapse">
+                <div class="hero-nav-center d-flex flex-grow-1 justify-content-md-center">
+                    <ul class="navbar-nav hero-menu mx-auto mt-3 mt-md-0 p-2 p-md-1 gap-1">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link px-3 py-2" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 py-2" href="#about">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 py-2" href="#reviews">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 py-2" href="#contact">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="tel:61434033654"
+                    class="p-2 px-4 hero-phone d-inline-flex align-items-center justify-content-center gap-2 ms-md-auto mt-3 mt-md-0">
+                    <span class="iconify" data-icon="mingcute:phone-fill" data-width="18" data-height="18"></span>
+                    <span class=" text-decoration-none">+61 434 033 654</span>
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Bootstrap Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-success" id="successModalLabel">Success!</h5>
+        </div>
+        <div class="modal-body">
+            Thank you for choosing HINT SERVICES! Your request has been received, an email confirming your booking details will arrive shortly. If you have any immediate queries, feel free to reach out. Have a wonderful day!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-light close" data-dismiss="modal" aria-label="Close" id="btn-bg-clr">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <section id="home" class="min-vh-100 d-flex align-items-end">
+        <div class="container home-inner">
+            <div class="row">
+                <div class="col-xl-6 col-lg-7 col-md-9">
+                    <div class="home-content" data-aos="fade-up">
+                        <h1 class="home-title">Refresh Your Space,  <br><span>Leave the Cleaning to Us!</span></h1>
+                        <p class="home-subtitle">We'll carefully clean your home or office using professional equipment
+                            and eco-friendly products. Punctual. Neat. Guaranteed.</p>
+                        <a href="#booknow" class="home-cta text-decoration-none">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="">
+        <div class="whatsapp-btn fixed-bottom d-flex justify-content-end m-4 "><button class="btn btn-outline-light p-2 px-4 rounded-3" onclick="send()"><span
+                    class="iconify m-1 text-white" data-icon="ic:baseline-whatsapp" data-width="25" data-height="25"></span>How can
+                I help you?</button></div>
+        <!-- <div class="messenger-chat fixed-bottom">Messenger Chat Plugin Code -->
+            <!-- <div id="fb-root"></div> -->
+        
+            <!-- Your Chat Plugin code -->
+            <!-- <div id="fb-customer-chat" class="fb-customerchat"> -->
+            <!-- </div></div> -->
+    </section>
+
+    <!-- Book Form -->
+    <section id="booknow" class="section-padding" data-aos="fade-up">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-5">
+                    <div class="booknow-copy">
+                        <h1 class="booknow-title display-5 fw-bolder">Book Your Service NOW!</h1>
+                        <div class="line"></div>
+                        <p class="text-secondary fw-light mb-0"><span class="iconify mb-1 head"
+                                data-icon="lucide:info"></span> Once you've shared your details and service requirements,
+                            we'll promptly connect with you via email to confirm a convenient site visit. During the
+                            inspection, we'll tailor our services to meet your specific requirements and any additional
+                            details. By this, we ensure a tailored and efficient service for your needs. Get ready to
+                            experience a pristine space with our dedicated cleaning solutions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <form class="row g-3 p-lg-3 mt-5 bg-white form-box" id="submit-form" action=""
+                        onclick="submit_form();">
+                        <div class="col-12 text-center">
+                            <h1 class="fw-bolder">BOOK HERE</h1>
+                            <div class="line mx-auto"></div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <input type="text" name="name" class="form-control" placeholder="Name*" id="name" required>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <input id="mobile" type="tel" name="mobile" class="form-control" placeholder="Mobile*"
+                                required>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <input id="email" type="email" name="email" class="form-control" placeholder="Email*"
+                                required>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <textarea name="message" rows="5" class="form-control" id="message"
+                                placeholder="Please enter below a brief description of the services that you require*"
+                                required></textarea>
+                        </div>
+                        <div class="form-group col-lg-12 d-grid">
+                            <button class="btn btn-link fw-bolder" id="btn-bg-clr" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section-padding mt-5 mr-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="section-title" data-aos="fade-up">
+                        <h1 class="display-4 fw-bolder">Services</h1>
+                        <div class="line mx-auto"></div>
+                        <p class="fw-light">Restore tranquillity! Let us sweep away the chaos!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 d-flex" data-aos="flip-left">
+                    <div class="service p-lg-2 p-2">
+                        <div class="iconbox">
+                            <img src="assets/images/airbnb.jpg" class="serv-img">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder text-center head">AIRBNB Cleaning</h5>
+                        <div>
+                            <ul class="service-align">
+                                <li>Individual/multiple cabins.</li>
+                                <li>Linen change.</li>
+                                <li>Laundry <span class="fw-light">(Streamline your laundry needs with our premium
+                                        linens and hassle-free
+                                        laundry service ensuring quality and convenience for every guest stay).</span>
+                                </li>
+                                <li>Listing handling.</li>
+
+                            </ul>
+
+                        </div>
+                        <div class="">
+                            <a href="#booknow" class="btn btn-primary ms-lg-2" id="btn-bg-clr">Book Now</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 d-flex" data-aos="flip-left">
+                    <div class="service p-lg-2 p-2">
+                        <div class="iconbox">
+                            <img src="assets/images/resclean.jpg" class="serv-img">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder text-center head">Residential Cleaning</h5>
+                        <div>
+                            <ul class="service-align">
+                                <li>Offers all essential cleaning services.</li>
+                                <li>Weekly clean.</li>
+                                <li>Fortnightly clean.</li>
+                                <li>Flexible.</li>
+                                <li>Additional tailored services on request.</li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <a href="#booknow" class="btn btn-primary ms-lg-2" id="btn-bg-clr">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 d-flex" data-aos="flip-right">
+                    <div class="service p-lg-2 p-2">
+                        <div class="iconbox">
+                            <img src="assets/images/windowclean.jpg" class="serv-img">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder text-center head">Window Cleaning</h5>
+                        <div>
+                            <ul class="service-align">
+                                <li>Inside/Out or both.</li>
+                                <li>Complete care.<span class="fw-light">(window sills, inside, outside)</span></li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <a href="#booknow" class="btn btn-primary ms-lg-2" id="btn-bg-clr">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 d-flex" data-aos="flip-right">
+                    <div class="service p-lg-2 p-2">
+                        <div class="iconbox">
+                            <img src="assets/images/office-clean.jpg" class="serv-img">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder text-center head">Office Cleaning</h5>
+                        <div>
+                            <ul class="service-align">
+                                <li>Offers all essential cleaning services.</li>
+                                <li>Weekly or fortnight Cleaning available.</li>
+                                <li>Contract clean or per hour based clean available.</li>
+                                <li>Additional tailored services on request.</li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <a href="#booknow" class="btn btn-primary ms-lg-2" id="btn-bg-clr">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <div class="col-12 text-center">
+                    <div class="section-title mt-5 fw-bolder">
+                        <p>We believe in going the extra mile to make your experiences memorable, whether it's ensuring
+                            your space sparkles, immortalizing precious moments, or tantalizing taste buds. Take a look
+                            at our diverse array of top-notch <span class="fw-bolder head">ADDITIONAL SERVICES</span>
+                        </p>
+                        <div class="line mx-auto"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <div class="col-lg-4 col-sm-6 mx-auto d-flex">
+                    <div class="service p-lg-2 p-2" data-aos="flip-left">
+                        <div class="iconbox">
+                            <img src="assets/images/photography.jpg" class="serv-img">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder text-center head">Photography Service</h5>
+                        <div>
+                            <ul class="service-align">
+                                <li>Quick photo session <span class="fw-bolder"> @ 200/hour.</span></li>
+                                <li>Real estate/ AIRBNB listing.</li>
+                                <li>Pet/Family/Birthday/Events.</li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <a href="#booknow" class="btn btn-primary ms-lg-2" id="btn-bg-clr">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mx-auto d-flex">
+                    <div class="service p-lg-2 p-2" data-aos="flip-right">
+                        <div class="iconbox">
+                            <img src="assets/images/catering.jpg" class="serv-img">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder text-center head">Catering service</h5>
+                        <div>
+                            <ul class="service-align">
+                                <li>Providing service delivery, from serving to cleaning.</li>
+                                <li>Delivering at your doorstep.</li>
+                                <li>Min order of 20 ppl. <span class="fw-light">(Can deliver or serve upon
+                                        request).</span></li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <a href="#booknow" class="btn btn-primary ms-lg-2" id="btn-bg-clr">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section-padding mb-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="section-title" data-aos="fade-up">
+                        <h1 class="display-4 fw-bolder">About us</h1>
+                        <div class="line mx-auto"></div>
+                        <p class="fw-light mb-1">About Hint Services: Unveiling Our Cleaning Excellence</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row about-layout g-4 align-items-stretch">
+                <div class="col-lg-6" data-aos="zoom-in">
+                    <div class="about-media-card h-100">
+                        <div class="about-media-head">
+                            <span class="about-chip">Trusted Team</span>
+                            <span class="about-chip">Eco Friendly</span>
+                        </div>
+                        <div id="carouselExampleAutoplaying" class="carousel slide about-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="2000">
+                                    <img src="assets/images/about-1.jpg" class="d-block w-100" alt="About Hint Services 1">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <img src="assets/images/about-2.jpg" class="d-block w-100" alt="About Hint Services 2">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <img src="assets/images/about-3.jpg" class="d-block w-100" alt="About Hint Services 3">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="about-media-caption mb-0">Reliable cleaning for homes, Airbnb stays, and offices across Geelong.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="zoom-in">
+                    <article class="about-content-card h-100">
+                        <img src="assets/images/Hintservices-logo-black.png" alt="Hint Services logo" class="about-logo mb-4">
+                        <h2 class="about-heading">Welcome to Hint Services</h2>
+                        <p class="about-copy">where cleanliness meets commitment. We're dedicated to providing top-tier
+                            cleaning services tailored to meet your unique needs. With our team of skilled
+                            professionals, state-of-the-art equipment, and a commitment to quality, we ensure sparkling
+                            results that exceed expectations. Discover a fresh perspective on cleanliness with Hint
+                            Services.</p>
+                        <p class="about-copy mb-0">Our team is crafted from the finest professionals, dedicated to delivering an unparalleled level
+                            of service that exceeds expectations. We take pride in our meticulous attention to detail, using
+                            top-of-the-line, eco-friendly cleaning products that guarantee a pristine finish while caring
+                            for the environment. Our efficient cleaners are not just experts; they're passionate artisans
+                            who transform spaces into immaculate sanctuaries. With us, experience punctuality, reliability, and
+                            a commitment to flawless execution, ensuring every corner sparkles with radiance. Trust us for a
+                            transformative cleaning experience that elevates your space to new heights of brilliance!</p>
+                        <div class="about-social-wrap">
+                            <h6 class="about-social-title mb-2">Follow us on Social Media</h6>
+                            <div class="social-icons about-social-icons">
+                                <a href="https://www.instagram.com/hintservices?igsh=MWRtZ3gzYnB0cmQ2eg==" class="about-social-link" aria-label="Instagram">
+                                    <span class="iconify" data-icon="ri:instagram-fill"></span>
+                                </a>
+                                <a href="https://www.facebook.com/hintservices.au?mibextid=LQQJ4d" class="about-social-link" aria-label="Facebook">
+                                    <span class="iconify" data-icon="ic:baseline-facebook"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Features -->
+    <section id="feature" class="min-vh-100 d-flex align-items-center text-center">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-3 col-sm-6 d-flex mt-4" data-aos="zoom-in">
+                    <div class="feature-card p-lg-2 p-2 bg-light">
+                        <div class="iconbox p-4">
+                            <img src="assets/images/Reliability.png" alt="icon" class="feature-img">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder text-center head">Reliability</h5>
+                        <p>we are punctual and consistent in delivering excellent cleaning services.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 d-flex mt-4" data-aos="zoom-in">
+                    <div class="feature-card p-lg-2 p-2 bg-light">
+                        <div class="iconbox p-4">
+                            <img src="assets/images/professional.png" alt="icon" class="feature-img">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder text-center head">Professionalism</h5>
+                        <p>We have a group of well trained and courteous staff, the highlight being
+                            commitment to professionalism in every aspect of our service.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-sm-6 d-flex mt-4" data-aos="zoom-in">
+                    <div class="feature-card p-lg-2 p-2 bg-light">
+                        <div class="iconbox p-4">
+                            <img src="assets/images/Attention-to-detail.png" alt="icon" class="feature-img">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder text-center head">Attention to Detail</h5>
+                        <p>We promise a meticulous approach to cleaning, ensuring every nook
+                            and cranny gets the attention it deserves.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-sm-6 d-flex mt-4" data-aos="zoom-in">
+                    <div class="feature-card p-lg-2 p-2 bg-light">
+                        <div class="iconbox p-4">
+                            <img src="assets/images/Customizable.png" alt="icon" class="feature-img">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder text-center head">Customized Services</h5>
+                        <p>We gladly provide flexibility in tailoring cleaning packages to meet the
+                            specific needs of our clients.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-sm-6 d-flex mt-4" data-aos="zoom-in">
+                    <div class="feature-card p-lg-2 p-2 bg-light">
+                        <div class="iconbox p-4">
+                            <img src="assets/images/Environment-friendly.png" alt="icon" class="feature-img">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder text-center head">Environmentally Friendly Practices</h5>
+                        <p>We completely rely on using eco-friendly products and
+                            sustainable cleaning methods.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-sm-6 d-flex mt-4" data-aos="zoom-in">
+                    <div class="feature-card p-lg-2 p-2 bg-light">
+                        <div class="iconbox p-4">
+                            <img src="assets/images/Affordable.png" alt="icon" class="feature-img">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder text-center head">Affordability and Transparency</h5>
+                        <p>With our fair pricing structure and transparent policies, we
+                            aim to build trust with potential clients.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 d-flex mt-4" data-aos="zoom-in">
+                    <div class="feature-card p-lg-2 p-2 bg-light">
+                        <div class="iconbox p-4">
+                            <img src="assets/images/available.png" alt="icon" class="feature-img">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder text-center head">Availability and Flexibility</h5>
+                        <p>We are available and willing to accommodate different schedules
+                            to suit your needs.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-sm-6 d-flex mt-4" data-aos="zoom-in">
+                    <div class="feature-card p-lg-2 p-2 bg-light">
+                        <div class="iconbox p-4">
+                            <img src="assets/images/Customer-service.png" alt="icon" class="feature-img">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder text-center head">Customer care</h5>
+                        <p>Our Customer is our first priority, we are 24/7 available.</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- REVIEW -->
+    <section id="reviews" class="section-padding bg-light mb-5 p-2">
+        <div class="container">
+            <div class="row mb-3 mt-4">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Reviews and Testimonials</h1>
+                        <div class="line mx-auto"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4 gx-4 mb-3">
+                <div class="col-lg-4 col-sm-6 d-flex" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-delay="100">
+                    <div class="review bg-white" style="border-radius: 10px;">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle m-2 mt-2" src="./assets/images/DP-M.jpg" alt=""
+                                style="width:3em">
+                            <div class="ms-2 mt-2">
+                                <h6 class="mb-0">Marlin Varghese</h6>
+                                <small>Reviewed on Google - <span class="fw-light">4/10/2023</span></small>
+                                <div class="text-warning">
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-head p-3 pt-0 pb-1 mt-3">
+                            <p class="fw-light">Exemplary service! The cleaning team from Hint Services exceeded my
+                                expectations. Their attention to detail left my home sparkling clean. Punctual,
+                                professional, and thorough—highly recommended for anyone seeking top-tier cleaning
+                                services!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 d-flex" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-delay="150">
+                    <div class="review bg-white" style="border-radius: 10px;">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle m-2 mt-2" src="./assets/images/DP-S.jpg" alt=""
+                                style="width:3em">
+                            <div class="ms-2 mt-2">
+                                <h6 class="mb-0">Smruthy Hariharan</h6>
+                                <small>Reviewed on Google - <span class="fw-light">24/10/2023</span></small>
+                                <div class="text-warning">
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-head p-3 pt-0 pb-1 mt-3">
+                            <p class="fw-light">I highly recommend this cleaning team. From the very beginning, they
+                                were professional and responsive. They promptly answered all my inquiries and provided
+                                detailed information about their services.
+                                Their professionalism, attention to detail, and excellent customer service make them
+                                stand out. They truly went above and beyond to ensure my satisfaction. I will definitely
+                                be using their services again in the future.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 d-flex" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-delay="200">
+                    <div class="review bg-white" style="border-radius: 10px;">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle m-2 mt-2" src="./assets/images/DP-D.jpg" alt=""
+                                style="width:3em">
+                            <div class="ms-2 mt-2">
+                                <h6 class="mb-0">Deepika Cheran</h6>
+                                <small>Reviewed on Google - <span class="fw-light">29/10/2023</span></small>
+                                <div class="text-warning">
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-head p-3 pt-0 pb-1 mt-3">
+                            <p class="fw-light">Reliable and Consistent:
+                                “Hint Services consistently delivers! I’ve been a regular customer, and their
+                                reliability is unmatched. Quality cleaning every time. Dependable team, highly
+                                recommended.”</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-delay="250">
+                    <div class="review bg-white" style="border-radius: 10px;">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle m-2 mt-2" src="./assets/images/DP-G.jpg" alt=""
+                                style="width:3em">
+                            <div class="ms-2 mt-2">
+                                <h6 class="mb-0">Gopal Krishna S</h6>
+                                <small>Reviewed on Google - <span class="fw-light">6/11/2023</span></small>
+                                <div class="text-warning">
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-head p-3 pt-0 pb-1 mt-3">
+                            <p class="fw-light">What sets Hint Services apart is their personalized touch. They
+                                understand my preferences, and the cleaning feels tailored to my needs. It’s like having
+                                a cleaning service designed just for me.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 d-flex" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-delay="300">
+                    <div class="review bg-white" style="border-radius: 10px;">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle m-2 mt-2" src="./assets/images/DP-J.jpg" alt=""
+                                style="width:3em">
+                            <div class="ms-2 mt-2">
+                                <h6 class="mb-0">Jatan Desai</h6>
+                                <small>Reviewed on Google - <span class="fw-light">19/11/2023</span></small>
+                                <div class="text-warning">
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-head p-3 pt-0 pb-1 mt-3">
+                            <p class="fw-light">Very punctual and has a cleaning service that left my air bnb looking
+                                spotless….. I would highly recommend for domestic cleaning and commercial cleaning.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 d-flex" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-delay="350">
+                    <div class="review bg-white" style="border-radius: 10px;">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle m-2 mt-2" src="./assets/images/DP-J.jpg" alt=""
+                                style="width:3em">
+                            <div class="ms-2 mt-2">
+                                <h6 class="mb-0">Jaseem Iqbal</h6>
+                                <small>Reviewed on Google - <span class="fw-light">25/11/2023</span></small>
+                                <div class="text-warning">
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                    <span class="iconify" data-icon="iconoir:star-solid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-head p-3 pt-0 pb-1 mt-3">
+                            <p class="fw-light">Great work with no less workmanship, attention to detail and great
+                                interaction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mb-5 pb-5">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Contact Us</h1>
+                        <div class="line mx-auto"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="100">
+                    <div class="service p-lg-2 p-2">
+                        <div class="iconbox">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder head">Phone Number</h5>
+                        <p>+61 434 033 654</p>
+                        <a href="tel:61434033654" class="btn btn-primary" id="btn-bg-clr">Call Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="150">
+                    <div class="service p-lg-2 p-2">
+                        <div class="iconbox">
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder head">Email Address</h5>
+                        <p>team.hintservices@gmail.com</p>
+                        <a href="mailto:team.hintservices@gmail.com?&Subject=Service-Request" class="btn btn-primary"
+                            id="btn-bg-clr">Email Now</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200">
+                    <div class="service p-lg-2 p-2">
+                        <div class="iconbox">
+
+                        </div>
+                        <h5 class="mt-2 mb-2 fw-bolder head">Address</h5>
+                        <p>33 Flannery Circuit, Geelong, Victoria 3217, Australia</p>
+                        <a href="https://www.google.com/maps/dir//33+Flannery+Cct,+Charlemont+VIC+3217,+Australia/@-38.2114251,144.3670525,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x6ad414c793601f97:0x5f7b5c0719d872fa!2m2!1d144.3696274!2d-38.2114293?entry=ttu"
+                            class="btn btn-primary" id="btn-bg-clr">Get Direction</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-white" style="background-color:#1A1C20" data-aos="fade-up">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-5 col-sm-6">
+                        <h5>HINT SERVICES</h5>
+                        <p>Your Home, Our Professional Expertise</p>
+                        <div class="social-icons">
+
+                            <a href="https://www.instagram.com/hintservices?igsh=MWRtZ3gzYnB0cmQ2eg=="><span
+                                    class="iconify" data-icon="ri:instagram-fill"
+                                    style="color: rgb(255, 255, 255);"></span></a>
+                            <a href="https://www.facebook.com/hintservices.au?mibextid=LQQJ4d"><span class="iconify"
+                                    data-icon="ic:baseline-facebook" style="color: rgb(255, 255, 255);"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 pb-2">SERVICES</h5>
+                        <ul>
+                            <li><a href="#services" class="ul-list">AIRBNB Cleaning</a></li>
+                            <li><a href="#services" class="ul-list">Residential Cleaning</a></li>
+                            <li><a href="#services" class="ul-list">Window Cleaning</a></li>
+                            <li><a href="#services" class="ul-list">Office Cleaning</a></li>
+                            <li><a href="#services" class="ul-list">Photography Service</a></li>
+                            <li><a href="#services" class="ul-list">Catering service</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <h5 class="mb-0 pb-2">CONTACT</h5>
+
+                        <ul>
+                            <li>33 Flannery Circuit, Geelong, Victoria 3217, Australia</li>
+                            <li>+61 434 033 654</li>
+                            <li>www.hintservices.au</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container mt-5">
+                <div class="row g-1 text-center">
+                    <div class="col-12">
+                        <p>© Copyright 2026 Hint Services, All Rights Reserved</p>
+                    </div>
+                    <div class="col-12">
+                        <a href="https://stackatronixtech.com" class="ul-list fw-bolder">Designed By
+                            stackatronix</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "101004512948331");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script> -->
+  
+      <!-- SDK code -->
+      <!-- <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v18.0'
+          });
+        };
+  
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/scripts/main.js"></script>
+
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <script>
+        $("#submit-form").submit((e) => {
+            e.preventDefault();
+            $.ajax({
+              url: "https://formsubmit.co/ajax/team.hintservices@gmail.com",
+              data: $("#submit-form").serialize(),
+              method: "post",
+              success: function (response) {
+                $('#successModal').modal('show');
+    
+                $('#successModal .close').on('click', function() {
+                  // Reload the page
+                  window.location.reload();
+                });
+                
+                //reset the form
+                $("#submit-form").trigger('reset');
+              },
+              error: function (err) {
+                alert("Something Went Wrong!! Please refresh the page and try again.");
+              }
+            });
+          });
+    </script>
+
+</body>
+
+</html>
